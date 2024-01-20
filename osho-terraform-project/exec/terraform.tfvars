@@ -1,0 +1,11 @@
+region="us-east-1"
+project_name="oshone" 
+instance_type="t2.micro"
+ami="ami-0c7217cdde317cfec"
+cidr_block="10.0.0.0/16"
+subnet_a_cidr="10.0.1.0/24"
+subnet_b_cidr="10.0.2.0/24"
+subnet_c_cidr="10.0.3.0/24"
+domain_name ="osho.com.ng"
+subdomain_name ="terraform-test"
+

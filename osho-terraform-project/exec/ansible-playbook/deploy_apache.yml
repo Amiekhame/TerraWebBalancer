@@ -1,0 +1,24 @@
+---
+- name: Deploy Apache and Configure Timezone
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+
+    - name: Set Timezone to Africa/Lagos
+      timezone:
+        name: Africa/Lagos
+
+    - name: Create HTML Page
+      template:
+        src: index.html.j2
+        dest: /var/www/html/index.html
+
+    - name: Restart Apache
+      service:
+        name: apache2
+        state: restarted
